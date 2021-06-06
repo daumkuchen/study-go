@@ -1,1 +1,1 @@
-# study-golang
+# study-go
