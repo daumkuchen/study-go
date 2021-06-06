@@ -4,11 +4,6 @@ import (
   "github.com/gomodule/redigo/redis"
 )
 
-type Data struct {
-  Key string
-  Value string
-}
-
 func Connection() redis.Conn {
   c, err := redis.Dial("tcp", "127.0.0.1:6379")
   if err != nil {
