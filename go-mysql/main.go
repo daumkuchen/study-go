@@ -13,29 +13,9 @@ type User struct {
 
 func createDb() (db *sql.DB, err error) {
 
-  // local
-  // develop
-  // production
-  // の3つのステータスで進める
-
-  // viewers
-  //
-  //
-  //
-  //
-
-
-  // ローカルDB（Docker）
-  //USER := "root"
-  //PASS := "pass"
-  //ENDPOINT := "127.0.0.1"
-  //PORT := "3306"
-  //DB_NAME := "sample_db"
-
-  // テスト用DB（自前）
-  USER := "admin"
-  PASS := "passpass"
-  ENDPOINT := "aurora-test.cluster-ro-chcyq52gicds.ap-northeast-1.rds.amazonaws.com"
+  USER := "root"
+  PASS := "pass"
+  ENDPOINT := "127.0.0.1"
   PORT := "3306"
   DB_NAME := "sample_db"
 
@@ -140,7 +120,7 @@ func main() {
   }
   defer db.Close()
 
-  // 追加（削除したidは生きるので、間が空く）
+  // 追加
   //insertUser(db, "Dave");
 
   // 更新
